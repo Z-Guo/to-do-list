@@ -68,7 +68,7 @@ form button:hover {
     flex:1;
 }
 
-.delete-btn, .complete-btn {
+.trash-btn, .complete-btn {
     background:grey;
     color:white;
     border: none;
@@ -77,6 +77,15 @@ form button:hover {
     font-size: 1rem;
 }
 
-.complete-btn{
+.complete-btn {
     background: rgb(89, 199, 89);
+}
+
+.todo-item {
+    padding: 0rem 0.5rem;
+}
+
+.fa-trash,
+.fa-check{
+    pointer-events:none;
 }
