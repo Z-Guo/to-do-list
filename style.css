@@ -5,8 +5,8 @@
 }
 
 body {
-    background-image: linear-gradient(110deg, #8ab34cc4, #F5FFFA, #F1DDDF);
-    color: #476930;
+    background-image: linear-gradient(110deg, #358597, #eee3e1, #f4a896);
+    color: #ffffff;
     font-family: "Poppins", sans-serif;
     min-height: 100vh
 }
@@ -32,14 +32,14 @@ form button {
 }
 
 form button {
-    color: #476930;
-    background: rgb(228, 226, 226);
+    color: white;
+    background: #f4a896;
     cursor: pointer;
     transition: all 0.3s ease;
 }
 
 form button:hover {
-    background: #476930;
+    background: #358597;
     color: rgb(228, 226, 226);
 }
 
@@ -62,6 +62,7 @@ form button:hover {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    transition:all 0.5s ease;
 }
 
 .todo li{
@@ -69,7 +70,7 @@ form button:hover {
 }
 
 .trash-btn, .complete-btn {
-    background:grey;
+    background:#66757c;
     color:white;
     border: none;
     padding: 1rem;
@@ -78,7 +79,7 @@ form button:hover {
 }
 
 .complete-btn {
-    background: rgb(89, 199, 89);
+    background: #a6c689;
 }
 
 .todo-item {
@@ -89,3 +90,58 @@ form button:hover {
 .fa-check{
     pointer-events:none;
 }
+
+.completed{
+    text-decoration:line-through;
+    opacity: 0.5;
+}
+
+.fall{
+    transform:translateY(8rem) rotateZ(20deg);
+    opacity: 0;
+}
+
+
+/*CUSTOM SELECTOR */
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
+    outline: 0;
+    box-shadow: none;
+    border: 0 !important;
+    background-image: none;
+  }
+  
+  /* Custom Select */
+  .select {
+    margin: 1rem;
+    position: relative;
+    overflow: hidden;
+  }
+  select {
+    color: #f4a896;
+    font-family: "Poppins", sans-serif;
+    cursor: pointer;
+    width: 12rem;
+    padding:1.1rem;
+  }
+  /* Arrow */
+  .select::after {
+    content: "\25BC";
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 1rem;
+    background: #f4a896;
+    cursor: pointer;
+    pointer-events: none;
+  }
+  /* Transition */
+  
+  .select:hover::after {
+    background-color: #358597;
+    transform:scale(1);
+  }
+  
